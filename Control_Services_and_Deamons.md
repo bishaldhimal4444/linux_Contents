@@ -9,8 +9,21 @@
    - remains active to respond to requests or perform tasks when needed.
    - 
 6. List Service Units:
-7. View Service States:
-8. Verify the status of Service;
+   ```
+   systemctl list-units --type=service
+   systemctl list-units --type=service --all
+   systemctl list-unit-files --type=service
+   ```
+8. View Service States:
+   ```
+   systemctl status name.type
+   systemctl status sshd
+   ```
+10. Verify the status of Service;
+    ```
+    systemctl is-active sshd
+    systemctl in-enabled sshd
+    ```
 
 # Control System Services:
 ```
