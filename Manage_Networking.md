@@ -15,8 +15,8 @@ s3: Display Performance Statistics: ``` ip -s link show ens3 ```
 s4: Verify Connectivity between Hosts: ``` pig -c3 ip_addr ```  
 s5: Describe the Routing Table: ``` ip route ````  
 s6: Trace Traffic Routes: ``` tracepath access.redhat.com ```
-s7: Troubleshoot port and service issues: ``` ss -ta ```
-where, 
+s7: Troubleshoot port and service issues: ``` ss -ta ```  
+where,   
   -t = show tcp sockets  
   -a = show all sockets  
   -n = show number instead of names for interfaces and ports
