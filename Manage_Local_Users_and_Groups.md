@@ -51,11 +51,6 @@ To Completely remove the username from **/etc/passwd** as well as its home direc
 userdel -r username
 ```
 
-
-
-### Manage user passwords
-
-
 ### Other cmds:
 1. To show the info. about current user: ```id```  
 2. To show the info. about that user: ```id username```  
@@ -98,4 +93,27 @@ ALL: user1 can run all commands.
 **ALL**: They can run any command.  
 
 
+
+### Manage user passwords
+
+Originally, encrypted passwords were stored in the world-reable **/etc/passwd** file. later, the cryptographically hashed passwords were moved to the **/etc/shadow** file which only the root user can read due to dictionary attacks on encrypted passwords became common.  
+
+An example entry from the **/etc/shadow** file has 9 colon-separated fields:
+```
+cat /etc/shadow
+```
+Output:
+```
+A:B:C:D:E:F:G:H:null
+```
+where,  
+A = username  
+B = encrypted Password  
+C = last passwd change days
+D = min. days since last passwd change before user can change it again.  
+E = max. days without a passwd change before it expires.  
+F = no. of days to warn the user to change passwd.  
+G = no. of days without activity.  
+H = expiry days 
+null = last field is typically empty & is reserved for future use.  
 
