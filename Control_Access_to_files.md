@@ -29,3 +29,18 @@ or
 ```
 chmod 660 document.txt
 ```
+
+## Change File and Directory User or Group Ownership:
+1. To grant ownership of the **app.conf** file to the **student**:
+```
+chown student app.conf
+```
+3. To change the group ownership of the **Picture** directory to **admin**:
+```
+chown :admin Picture
+```
+5. To change the ownership of the **Picture** directory to the **visitor** user and group to **guests**:
+```
+chown visitor:guests Picture
+```
+   
