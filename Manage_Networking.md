@@ -30,12 +30,39 @@ Network Manager Service:
 - monitors and manages a system's network settings.
 
 Useful Network Manager Commands:  
-- To show the network manager status of all network interfaces.  
-- to list all connections.  
-- to list the current settings for the connectiion name.  
-- to add ad name a new connection profila.  
-- to modifry the connection name.  
-- to reload the configuration files, after manual file editing.  
-- to activate the connection name.  
-- to disconnect the interface, which also deactivates the current connection.  
-- to deletre the specified connection and its configuration file.  
+- To show the network manager status of all network interfaces.
+  ```
+  nmcli dev status
+  ```  
+- to list all connections.
+  ```
+  nmcli con show
+  ```
+- to list the current settings for the connectiion name.
+  ```
+  nmcli con show name
+  ```
+- to add ad name a new connection profile.
+  ```
+  nmcil con add con_name
+  ```
+- to modify the connection name.
+  ```
+  nmcli con mod name
+  ```
+- to reload the configuration files, after manual file editing.
+  ```
+  nmcli con reload
+  ```
+- to activate the connection name.
+  ```
+  nmcli con up name
+  ```
+- to disconnect the interface, which also deactivates the current connection.
+  ```
+  nmcli dev dis dev
+  ```
+- to deletre the specified connection and its configuration file.
+  ```
+  nmcli con del name
+  ```
