@@ -124,9 +124,19 @@ Service configuration files are stored in the **/etc/NetworkManager/system_conne
  
 ### Edit Network Configuration File
 - s1: identify the network interface
+    ```
+    nmcli dev status
+    ```
 - s2: navigate to the configuration files
+    ```
+    cd /etc/sysconfig/network_scripts/
+    ```
 - s3: locate the configuration file (ifcfg-<interface_name>)
+    
 - s4: backup the configuration file
+    ```
+    cp ifcfg-<interface_name> ifcfg-<interface_name>.bak
+    ```
 - s5: edit the configuration file
     ```
     sudo vim ifcfg-<interface_name>
