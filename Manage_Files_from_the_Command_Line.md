@@ -13,10 +13,10 @@
 
 
 # Linux Important Sub-directories:
-/etc/passwd	To view all users.  
-/etc/sudoers	Main configuration file for the sudo command.  
-/etc/sudoers.d/user1	To enable full sudo access for user1: [ user1 ALL=(ALL) ALL ]  
-/etc/sudoers.d/group1	To enable full sudo access for group1 users: [ %group1 ALL=(ALL) ALL ]  
-/etc/login.defs	Sets some default options for user accounts, such as range of valid uid numbers, and default password aging rules. The change in this file does not affect existing users, it only affects the newly created user accounts.
+**/etc/passwd:** To view all users.  
+**/etc/sudoers:**	Main configuration file for the sudo command.  
+**/etc/sudoers.d/user1:**	To enable full sudo access for user1: [ user1 ALL=(ALL) ALL ]  
+**/etc/sudoers.d/group1:**	To enable full sudo access for group1 users: [ %group1 ALL=(ALL) ALL ]  
+**/etc/login.defs:**	Sets some default options for user accounts, such as range of valid uid numbers, and default password aging rules. The change in this file does not affect existing users, it only affects the newly created user accounts.
 
 2. Absolute Path vs. Relative Path
