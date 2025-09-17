@@ -8,12 +8,21 @@
 **2. Supplementary Group**	Users might also have supplementary group. Additional groups that a user can be part of. Grants access to specific files, directories, or system resources.  
 **3. System Groups**	Used for system level permissions (eg: sudo, docker, adm).  
 
-## To view the users and group details: 
+### To view the users and group details: 
 ```
 cat /etc/passwd
 cat /etc/group
 ```
-## Other cmds:
+
+### Manage local Users: 
+1. Create users:
+2. Delete users:
+3. Set Passwords
+
+### Manage user passwords
+
+
+### Other cmds:
 1. To show the info. about current user: ```id```  
 2. To show the info. about that user: ```id username```  
 4. To show the owner of that file: ```ls -l```  
@@ -49,5 +58,10 @@ ALL: user1 can run all commands.
 ```
 %group1 ALL=(ALL) ALL
 ```
-7.  
+**%group1**: The % indicates this is a group, not a user. This rule applies to all users who are members of group1.  
+**ALL**: The rule applies on all hosts (mainly relevant in environments using the same sudoers file across multiple systems).  
+**(ALL)**: Members of group1 can run commands as any user (including root).  
+**ALL**: They can run any command.  
+
+
 
