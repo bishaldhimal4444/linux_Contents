@@ -117,3 +117,16 @@ G = no. of days without activity.
 H = expiry days 
 null = last field is typically empty & is reserved for future use.  
 
+
+Example:
+Command to change the user password aging policy:  
+```
+chage -m 0 -M 90 -w 7 -I 14 <username>
+```
+Where,  
+**-m 0** → Sets the minimum number of days between password changes to 0, meaning the user can change their password at any time.
+**-M 90** → Sets the maximum number of days the password is valid to 90, requiring the user to change their password every 90 days.
+**-w 7** → Sets the warning period to 7 days, meaning the user will start receiving warnings 7 days before the password expires.
+**-I 14** → Sets the inactive period to 14 days, meaning if the password expires and the user does not change it, the account will be disabled 14 days after expiration.
+
+
