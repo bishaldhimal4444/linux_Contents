@@ -40,6 +40,8 @@
     systemctl disable <unit>
     systemctl disable --now <unit>
     ```
+   systemctl enable unit cmd creates a symbolic link from the service unit file, usually in the /usr/lib/systemd/system directory, to the disk location where the systemd command looks for files in the /etc/systemd/system/targetname.target.wants directory.
+    
 # Control System Services:
 ```
 systemctl status ssh.service
