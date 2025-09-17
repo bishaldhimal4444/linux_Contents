@@ -131,12 +131,12 @@ Service configuration files are stored in the **/etc/NetworkManager/system_conne
     ```
     sudo vim ifcfg-<interface_name>
     ```
-    (Modify the parameters as needed.)
-  TYPE=Ethernet
-  BOOTPROTO=dhcp
-  ONBOOT=yes
-  IPADDR=192.168.1.100 #static_IP
-  NETMASK=255.255.255.0 #subnet mask
-  GATEWAY=192.168.1.1 #default gateway
-  DNS1=8.8.8.8 #primary dns
-  DNS2=8.8.4.4 #secondary dns
+    (Modify the parameters as needed.)  
+  TYPE=Ethernet  
+  BOOTPROTO=dhcp  
+  ONBOOT=yes  
+  IPADDR=192.168.1.100 #static_IP  
+  NETMASK=255.255.255.0 #subnet mask  
+  GATEWAY=192.168.1.1 #default gateway  
+  DNS1=8.8.8.8 #primary dns  
+  DNS2=8.8.4.4 #secondary dns  
