@@ -37,9 +37,6 @@ or
 ps lax
 ```
 
-# Top vs. ps cmd:
-- top cmd is used for interactive and real-time process monitoring.
-- ps is a snapshot tool that displays a static list of currently running processes at a single point in time.
 
 # Control Jobs:
 - Run jobs in the backgroud:
@@ -70,6 +67,15 @@ sleep 5
   ```
   or
   ```
-  kill job_number
+  kill job_id
   ```
 
+# Monitor Process Activity:
+
+##### Top vs. ps cmd:
+- top (used for interactive and real-time process monitoring.)
+- ps (snapshot tool that displays a static list of currently running processes at a single point in time.)
+
+- uptime (Prints the current time, how long the machine has been up, how many user sessions are running and the current load average.)
+
+- lscpu (displays the number of cpu's on a system.)
