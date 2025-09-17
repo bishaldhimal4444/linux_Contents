@@ -24,7 +24,22 @@
     systemctl is-active sshd
     systemctl in-enabled sshd
     ```
-
+11. list Unit Dependecies
+    ```
+    systemctl list-dependencies sshd
+    ```
+13. Mask and Unmask services:
+    ```
+    systemctl mask service_name
+    systemctl unmask service_name
+    ```
+14. Enable Services to Start or Stop at Boot
+    ```
+    systemctl enable <unit>
+    systemctl enable --now <unit>
+    systemctl disable <unit>
+    systemctl disable --now <unit>
+    ```
 # Control System Services:
 ```
 systemctl status ssh.service
