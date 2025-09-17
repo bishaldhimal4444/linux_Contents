@@ -16,7 +16,16 @@ chmod <who/what/which> <file/directory>
 ```
 chmod go-rw document.txt
 ```
+or
+```
+chmod 600 document.txt
+```
+
 2. add r&w permissions for user and group:
 ```
 chmod ug+rw document.txt
+```
+or
+```
+chmod 660 document.txt
 ```
