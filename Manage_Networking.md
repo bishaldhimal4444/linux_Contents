@@ -77,8 +77,39 @@ Useful Network Manager Commands:
        sudo systemctl enable network
        ```
    - s2: validate network interfaces:
+       ```
+       nmcli dev status
+
+       nmcli con show <interface_name>
+       ```
    - s3: check ip address assignment:
+       ```
+       ip addr
+       ip -br addr
+       ```
    - s4: test connectivity:
+       ```
+       ping -c 4 127.0.0.1
+
+       ip route
+       ping -c 4 <gateway_ip>
+
+       ping -c 4 8.8.8.8
+
+       nslookup google.com
+       dig google.com
+       ```
    - s5: validate routing:
+       ```
+       ip route show
+       ```
    - s6: validate configuration files:
+       ```
+       sudo cat /etc/NetworkManager/system_connections/
+       ```
    - s7: monitor network logs:
+       ```
+       journalct -xe | grep network
+
+       dmesg | grep eth
+       ```
