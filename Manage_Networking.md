@@ -113,3 +113,30 @@ Useful Network Manager Commands:
 
        dmesg | grep eth
        ```
+
+### Configure Networking from the Command line:
+Service configuration files are stored in the **/etc/NetworkManager/system_connections directory.
+- s1: identify network interface
+- s2: configure network interface with "nmcli"
+- s3: configure network interface using "ifconfig"
+- s4: configure network by editing configuring files
+- s5: verify the configuration
+ 
+### Edit Network Configuration File
+- s1: identify the network interface
+- s2: navigate to the configuration files
+- s3: locate the configuration file (ifcfg-<interface_name>)
+- s4: backup the configuration file
+- s5: edit the configuration file
+    ```
+    sudo vim ifcfg-<interface_name>
+    ```
+    (Modify the parameters as needed.)
+  TYPE=Ethernet
+  BOOTPROTO=dhcp
+  ONBOOT=yes
+  IPADDR=192.168.1.100 #static_IP
+  NETMASK=255.255.255.0 #subnet mask
+  GATEWAY=192.168.1.1 #default gateway
+  DNS1=8.8.8.8 #primary dns
+  DNS2=8.8.4.4 #secondary dns
