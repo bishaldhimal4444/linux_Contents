@@ -19,4 +19,15 @@
 **/etc/sudoers.d/group1:**	To enable full sudo access for group1 users: [ %group1 ALL=(ALL) ALL ]  
 **/etc/login.defs:**	Sets some default options for user accounts, such as range of valid uid numbers, and default password aging rules. The change in this file does not affect existing users, it only affects the newly created user accounts.
 
-2. Absolute Path vs. Relative Path
+## Absolute Path vs. Relative Path
+**Absolute Path:** Always refers to the same location and starts from the root. It's longer but unambiguous.  
+**Relative Path:** Depends on your current location in the file system and is shorter but context-sensitive.
+
+
+### Joining cmd's:
+```
+mkdir dir1; cd dir1
+mkdir folder{1,2,3}
+echo file{1..3}.txt
+var_name=value; echo $var_name
+```
