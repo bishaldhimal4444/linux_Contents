@@ -16,8 +16,26 @@ cat /etc/group
 
 ### Manage local Users: 
 1. Create users:
-2. Delete users:
-3. Set Passwords
+```
+useradd username
+```
+The **/etc/login.defs** file sets some default options for user accounts, suchas range of valid UID numbers and default password aging rules. The change in this file doesnot affect existing users, it affects only the newly created user accounts.  
+
+```
+usermod --help
+```
+
+Example:   
+To add a user (bishal) to the supplementary group (docker):
+```
+usermod -aG docker bishal
+```
+To verify the user in the group: 
+```
+groups bishal
+```
+3. Delete users:
+4. Set Passwords
 
 ### Manage user passwords
 
