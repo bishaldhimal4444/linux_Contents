@@ -66,3 +66,19 @@ Useful Network Manager Commands:
   ```
   nmcli con del name
   ```
+### Validate Networking Configuration:
+1. validating the network configuration in RHEL ensures that the network settings are correct and functional.
+2. follow these step-by-step instructions:
+   - s1: verify network service status:
+       ```
+       sudo systemctl status network
+
+       sudo systemctl start network
+       sudo systemctl enable network
+       ```
+   - s2: validate network interfaces:
+   - s3: check ip address assignment:
+   - s4: test connectivity:
+   - s5: validate routing:
+   - s6: validate configuration files:
+   - s7: monitor network logs:
