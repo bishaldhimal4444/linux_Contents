@@ -205,3 +205,23 @@ Service configuration files are stored in the **/etc/NetworkManager/system_conne
     sudo systemctl restart systemd_hostnamed
     ```
   
+# Network Management Can be done in 3 Ways:
+1. GUI
+2. NMTUI (Network Management Text-based UI)
+3. NMCLI
+
+Network Profile stores network information like ip_address, subnet mask, ig, dns etc & ites path is **/etc/NetworkManager/system_connections/**
+
+NMCLI cmds: 
+```
+nmcli
+nmcli connection up/down <connection_name>
+nmcli device show/status
+```
+
+Example: 
+Adding new office connection:  
+```
+nmcli connection add type ethernet con_name office ipv4.addresses 192.168.1.222/24 ipv4.gateway 192.168.1.1 ipv4.dns 8.8.8.8 + ipv4.dns 4.4.4.4
+nmcli connection reload
+```
