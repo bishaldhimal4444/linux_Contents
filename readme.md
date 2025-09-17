@@ -4,12 +4,12 @@
 [4. Control Access to Files:](https://github.com/bishaldhimal4444/linux_Contents/blob/main/Control_Access_to_files.md)  
 [5. Monitor and Manage Linux Process:](https://github.com/bishaldhimal4444/linux_Contents/blob/main/Monitor_and_manage_Linux_process.md)  
 [6. Control Services and Deamons](https://github.com/bishaldhimal4444/linux_Contents/blob/main/Control_Services_and_Deamons.md)  
-[7. Configure and Secure SSH:]
-[8. Manage Networking]
-[9. Install and Update Software Packages]
-[10. Access Linux File Systems:]
-[11. Configuring and Securing SSH:]
-[12. Comprehensive Review:]
+[7. Configure and Secure SSH:](https://github.com/bishaldhimal4444/linux_Contents/blob/main/Configure_and_Secure_SSH.md)  
+[8. Manage Networking](https://github.com/bishaldhimal4444/linux_Contents/blob/main/Manage_Networking.md)  
+[9. Install and Update Software Packages]  
+[10. Access Linux File Systems:]  
+[11. Configuring and Securing SSH:]  
+[12. Comprehensive Review:]  
 
 
  [Linux All Commands Links:](https://github.com/trinib/Linux-Bash-Commands)
