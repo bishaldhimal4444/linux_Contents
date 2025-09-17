@@ -25,7 +25,7 @@ The **/etc/login.defs** file sets some default options for user accounts, suchas
 usermod --help
 ```
 
-Example:   
+##### Example:   
 To add a user (bishal) to the supplementary group (docker):
 ```
 usermod -aG docker bishal
