@@ -15,9 +15,9 @@ cat /etc/group
 ```
 
 ### Manage local Users: 
-1. Create users:
+1. Create/Add a new users:
 ```
-useradd username
+useradd new_username
 ```
 The **/etc/login.defs** file sets some default options for user accounts, suchas range of valid UID numbers and default password aging rules. The change in this file doesnot affect existing users, it affects only the newly created user accounts.  
 
@@ -34,8 +34,24 @@ To verify the user in the group:
 ```
 groups bishal
 ```
+
+2. Set Passwords
+```
+passwd username
+```
+
 3. Delete users:
-4. Set Passwords
+```
+userdel user_name
+```
+(Above cmd removes the username from **/etc/passwd** but leaves the user's home directory intact.)  
+
+To Completely remove the username from **/etc/passwd** as well as its home directory:
+```
+userdel -r username
+```
+
+
 
 ### Manage user passwords
 
