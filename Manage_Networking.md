@@ -149,4 +149,59 @@ Service configuration files are stored in the **/etc/NetworkManager/system_conne
   NETMASK=255.255.255.0 #subnet mask  
   GATEWAY=192.168.1.1 #default gateway  
   DNS1=8.8.8.8 #primary dns  
-  DNS2=8.8.4.4 #secondary dns  
+  DNS2=8.8.4.4 #secondary dns
+
+
+  ## Configure Hostname and Name Resolution
+  - s1: configure the hostname:
+      view the current hostname
+      ```
+      hostname
+      hostname ctl
+      ```
+      set the new hostname
+      ```
+      sudo hostnamectl set-hostname <new_hostname>
+      sudo vim /etc/hostname (replace new hostname)
+      ```
+      verify the change:
+      ```
+      hostname
+      hostnamectl
+      ```
+      for immediate effect - logour & login or
+      ```
+      exec bash
+      ```
+  - s2: update '/etc/hosts' for Name Resolutions
+      ```
+      sudo vim /etc/hosts
+      ```
+      add or update the hostname entry: format  
+    <ip_address> <FQDN> <hostname> or <ip_address> <hostname>  
+    Example:
+    ```
+    192.168.20.100 myserver
+    or
+    192.200.1.29 bishal.localdomain bishal
+    ```
+  - s3: Configure  DNS for Eternal Name Resolution
+      open the /etc/resolv.conf file
+      ```
+      sudo vi /etc/resolv.conf
+      ```
+      add dns server entries:
+      Example:
+        nameserver 8.8.8.8
+        nameserver 8.8.4.4
+    
+  - s4: Configure Persistent Hostname
+    for persistent hostname configuration, ensure the hostname is set in the **/etc/hostname** file
+    ```
+    echo "new_hostname" | sudo tee /etc/hostname
+    ```
+    restart hostname service
+    ```
+    sudo systemctl restart systemd_hostnamed
+    ```
+  
