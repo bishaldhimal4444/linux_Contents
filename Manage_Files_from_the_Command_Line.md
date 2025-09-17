@@ -1,15 +1,15 @@
 # Linux File System Hierarchy / Linux Directories:  
-**/boot**	Files to start the boot process.    
-***/root***	Home directory of super or root.  
+**/boot:**	Files to start the boot process.    
+***/root:***	Home directory of super or root.  
 	
-/home	Home directory, where regular users stores their data and files.  
-/etc	System-specific configuration files.  
-/var	Files that dynamically  change, such as db, cache directories, log files, website content.  
-/tmp	Files that are not accessed, changed, or modified for 10 days are deleted from this directory automatically.  
+**/home:**	Home directory, where regular users stores their data and files.  
+**/etc:**	System-specific configuration files.  
+**/var:**	Files that dynamically  change, such as db, cache directories, log files, website content.  
+**/tmp:**	Files that are not accessed, changed, or modified for 10 days are deleted from this directory automatically.  
 	
-/run	Includes data’s about process ID files and lock files.  
-/usr	Includes files, read-only program data, installed software and shared libraries.  
-/dev	Special device files that the system uses to access hardware.  
+**/run:**	Includes data’s about process ID files and lock files.  
+**/usr:**	Includes files, read-only program data, installed software and shared libraries.  
+**/dev:**	Special device files that the system uses to access hardware.  
 
 
 # Linux Important Sub-directories:
