@@ -11,4 +11,12 @@ chmod <who/what/which> <file/directory>
 **What** =	Add(+), remove(-), and set exactly(=).  
 **Which** = 	Read(r), write(w), execute(x) and special execute (X).  
 
-
+#### Example:
+1. remove r&w permissions for group and other:
+```
+chmod go-rw document.txt
+```
+2. add r&w permissions for user and group:
+```
+chmod ug+rw document.txt
+```
