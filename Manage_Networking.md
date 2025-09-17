@@ -9,8 +9,33 @@ IPv4 - 32 bits
 IPv6 - 128 bits
 
 ## Validate Networking 
-s1: Gather Network Interface Information: ``` ip link show ```
-s2: Display IP Address: ``` ip addr show ens3 ```
-s3: Display Performance Statistics: ``` ip -s link show ens3 ```
-s4: Verify Connectivity between Hosts: ``` pig -c3 ip_addr ```
-s5: 
+s1: Gather Network Interface Information: ``` ip link show ```  
+s2: Display IP Address: ``` ip addr show ens3 ```  
+s3: Display Performance Statistics: ``` ip -s link show ens3 ```  
+s4: Verify Connectivity between Hosts: ``` pig -c3 ip_addr ```  
+s5: Describe the Routing Table: ``` ip route ````  
+s6: Trace Traffic Routes: ``` tracepath access.redhat.com ```
+s7: Troubleshoot port and service issues: ``` ss -ta ```
+where, 
+  -t = show tcp sockets  
+  -a = show all sockets  
+  -n = show number instead of names for interfaces and ports
+  -u = show udp sockets
+  -l = show only listening sockets  
+  -p = show the processes that uses the sockets  
+
+
+## Configure Networking from the Command line: 
+Network Manager Service:  
+- monitors and manages a system's network settings.
+
+Useful Network Manager Commands:  
+- To show the network manager status of all network interfaces.  
+- to list all connections.  
+- to list the current settings for the connectiion name.  
+- to add ad name a new connection profila.  
+- to modifry the connection name.  
+- to reload the configuration files, after manual file editing.  
+- to activate the connection name.  
+- to disconnect the interface, which also deactivates the current connection.  
+- to deletre the specified connection and its configuration file.  
