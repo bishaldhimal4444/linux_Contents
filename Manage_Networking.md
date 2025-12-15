@@ -12,7 +12,7 @@ IPv6 - 128 bits
 s1: Gather Network Interface Information: ``` ip link show ```  
 s2: Display IP Address: ``` ip addr show ens3 ```  
 s3: Display Performance Statistics: ``` ip -s link show ens3 ```  
-s4: Verify Connectivity between Hosts: ``` pig -c3 ip_addr ```  
+s4: Verify Connectivity between Hosts: ``` ping -c3 ip_addr ```  
 s5: Describe the Routing Table: ``` ip route ```  
 s6: Trace Traffic Routes: ``` tracepath access.redhat.com ```  
 s7: Troubleshoot port and service issues: ``` ss -ta ```  
