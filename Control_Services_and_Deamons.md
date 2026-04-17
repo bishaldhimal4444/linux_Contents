@@ -36,7 +36,6 @@ systemctl status sshd
 or, 
 ```service sshd status```
 
-
 # 4. Verify the status of Service;
 ```
 systemctl is-active sshd
@@ -46,12 +45,40 @@ or,
 systemctl in-enabled sshd
 ```
 
-# 5. list Unit Dependecies
+
+# Control System Services:
+##### Start and Stop services:
+```
+systemctl status ssh.service
+```
+or,
+```
+systemctl start sshd
+```
+or,
+```
+systemclt stop sshd
+```
+##### Restart and Reload Services:
+```
+systemctl restart sshd
+```
+or,
+```
+systemctl reload sshd
+```
+or,
+```
+systemctl reload-or-restart sshd
+```
+
+
+##### list Unit Dependecies
 ```
 systemctl list-dependencies sshd
 ```
 
-# 6. Mask and Unmask services:
+##### Mask and Unmask services:
 ```
 systemctl mask service_name
 ```
@@ -60,7 +87,7 @@ or,
 systemctl unmask service_name
 ```
 
-# 7. Enable Services to Start or Stop at Boot
+##### Enable Services to Start or Stop at Boot
 ```
 systemctl enable <unit>
 ```
@@ -77,30 +104,8 @@ or,
 systemctl disable --now <unit>
 ```
 
-systemctl enable unit cmd creates a symbolic link from the service unit file, usually in the /usr/lib/systemd/system directory, to the disk location where the systemd command looks for files in the /etc/systemd/system/targetname.target.wants directory.
-    
-# Control System Services:
-Start and Stop services:
-```
-systemctl status ssh.service
-```
-or,
-```
-systemctl start sshd
-```
-or,
-```
-systemclt stop sshd
-```
-Restart and Reload Services:
-```
-systemctl restart sshd
-```
-or,
-```
-systemctl reload sshd
-```
-or,
-```
-systemctl reload-or-restart sshd
-```
+systemctl enable **<unit>** cmd creates a symbolic link from the service unit file, usually in the ```/usr/lib/systemd/system```directory, to the disk location where the systemd command looks for files in the ```/etc/systemd/system/targetname.target.wants``` directory.
+
+Example: ```systemctl enable sshd.service``` : creates symlink ```/etc/systemd/system/multi-user.target.wants/sshd.service ----------> /usr/lib/systemd/system/sshd.service
+
+
