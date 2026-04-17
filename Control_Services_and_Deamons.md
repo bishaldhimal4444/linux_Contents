@@ -111,6 +111,10 @@ Example: ```systemctl enable sshd.service``` : creates symlink ```/etc/systemd/s
 ## Mask in linux:
 - Masking ensures the service cannot be started manually or automatically by another service or dependency.
 - Masking a service in linux means disabling it completely by linking its unit file to /dev/null.
-- Syntax: ```sudo systemctl mask <service_name>``` This creates a symlink: /etc/systemd/system/nginx.service ---> /dev/null
-- To unmask a service: ```sudo systemctl unmask <service_name>
+- Syntax: ```sudo systemctl mask <service_name>``` This creates a symlink: ```/etc/systemd/system/nginx.service``` ---> ```/dev/null```
+- To unmask a service: ```sudo systemctl unmask <service_name>```
+
+## Static in linux:
+- Static indicates a service is not meant to run independently but support other processes. i.e. static services cannot be enabled automatically but may be started manually and used as a dependency.
+
 
