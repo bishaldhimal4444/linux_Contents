@@ -24,10 +24,18 @@
 **Relative Path:** Depends on your current location in the file system and is shorter but context-sensitive.
 
 
-### Joining cmd's:
+### Ways to write multiple commands in a single line:
 ```
 mkdir dir1; cd dir1
-mkdir folder{1,2,3}
+```
+Brace Expansion:
+```
+mkdir dir{1,2,3}
+```
+```
 echo file{1..3}.txt
+```
+Variable:
+```
 var_name=value; echo $var_name
 ```
