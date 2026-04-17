@@ -38,13 +38,14 @@ or,
 
 
 # 4. Verify the status of Service;
-    ```
-    systemctl is-active sshd
-    ```
-    or,
-    ```
-    systemctl in-enabled sshd
-    ```
+```
+systemctl is-active sshd
+```
+or,
+```
+systemctl in-enabled sshd
+```
+
 # 5. list Unit Dependecies
     ```
     systemctl list-dependencies sshd
