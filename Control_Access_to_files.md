@@ -1,34 +1,33 @@
-# Interpret linux File System Permissions
+# 1. Interpret linux File System Permissions
 **read(r):** 4  
 **write(w):** 2  
 **execute(x):**	1  
 
-# Manage File System Permissions from the command line:
+# 2. Manage File System Permissions from the command line:
+1. Change Permissions with the symbolic method: 
 ```
 chmod <who/what/which> <file/directory>
 ```
-**Who** =	User(u), group(g), other(o), and all(a).  
-**What** =	Add(+), remove(-), and set exactly(=).  
+**Who** =	User(u), group(g), other(o), and all(a).  \
+**What** =	Add(+), remove(-), and set exactly(=).  \
 **Which** = 	Read(r), write(w), execute(x) and special execute (X).  
 
-#### Example:
-1. remove r&w permissions for group and other:
+Example:Remove r&w permissions for group and other on the document.pdf file:
 ```
-chmod go-rw document.txt
+chmod go-rw document.pdf
 ```
-or
+Example: add r&w permissions for user and group:
 ```
-chmod 600 document.txt
+chmod ug+rw document.pdf
 ```
 
-2. add r&w permissions for user and group:
+2. Change permission with the octal method:
+Example: Set r+w permissions for user, read-only permissions for group and other, on the same document.pdf file:
 ```
-chmod ug+rw document.txt
+chmod 644 document.pdf
 ```
-or
-```
-chmod 660 document.txt
-```
+
+
 
 ## Change File and Directory User or Group Ownership:
 1. To grant ownership of the **app.conf** file to the **student**:
@@ -45,27 +44,34 @@ chown visitor:guests Picture
 ```
 
 # Manage Default Permissions and File Access:
-1.	Default File Permissions:  
-  a.	On creation, a file is assigned initial permissions.	  
-  b.	Two factors affect these initial permissions:  
-    i.	First is: whether you are creating a file or directory.	  
-    ii.	Second is: the current umask (user file-creation mask)  
-  c.	If you create a directory, then its initial octal permisisons are 0777 (drwx rwx rwx)  
+1.	Default File Permissions:  \
+  a.	On creation, a file is assigned initial permissions.	  \
+  b.	Two factors affect these initial permissions:  \
+    i.	First is: whether you are creating a file or directory.	  \
+    ii.	Second is: the current umask (user file-creation mask) \
+  	
+  c.	If you create a directory, then its initial octal permisisons are 0777 (drwx rwx rwx)  \
   d.	If you create a regular file, then its initial octal permissions are 0666 (-rw -rw -rw).  
 
-2.	Umask:	  
-  a.	Umask cmd dispalys the umask value of current shell. 
-  b.	To change the umask value: umask <vlaue>  
+2.	Umask:	  \
+  a.	Umask cmd dispalys the umask value of current shell. \
+  b.	To change the umask value: umask <vlaue>  \
 ##### Example: umask  
 ##### Output: 0022  
-Cmd:
+
+Example: 
 ```
 mkdir dir1 ; ls -ld dir1
 ```
 Output: drwxr- xr -x.    2    user    user   0 Jan 7   11:35   dir1  
 Here, umask value is 0022, which clears write(w) permissions for group(g) and other(o). So, when the user creates the new directory(dir1), it doesnot include the write(w) permissions for group(g) and other(o).   
 
-4.	Setting Special Permissions:  
+>[!Note:]
+>/etc/login.def file sets the default umask for users, and might be affected by settings in the /etc/profile, /etc/bashrc, and /etc/profile.d
+
+
+3.	Setting Special Permissions:
+
   a.	Symbolic:  
     i.	Setuid = u+s (executes files as the user that owns the file)  
     ii.	Setgid = g+s (executes files as the group that owns the file)  
