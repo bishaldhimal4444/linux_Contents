@@ -1,4 +1,4 @@
-# Process States and Lifecycle:
+# 1. Process States and Lifecycle:
 - running: R    
 - sleeping:  
    S : task_interruptible  
@@ -11,7 +11,7 @@
    X : exit_dead
 
 
-# list Processes:
+# 2. list Processes:
 ```
 ps aux
 ```
@@ -38,30 +38,34 @@ ps lax
 ```
 
 
-# Control Jobs:
-- Run jobs in the backgroud:
+# 3. Control Jobs:
+##### Run jobs in the backgroud:
 ```
 sleep 5 &
 ```
-- Runs the job in the foreground:
+
+##### Runs the job in the foreground:
 ```
 sleep 5
 ```
-- Bring background job to foreground:
+
+##### Bring background job to foreground:
   ```
   fg %1
   ```
   where '1' is the job number  
-- Suspends the current foreground job & places it in background:
+
+##### Suspends the current foreground job & places it in background:
    ```
    ctrl + Z
    ```
-- Start running the suspended process:
+
+#### Start running the suspended process:
   ```
   bg %1
   ```
   
-- Stop the job:
+##### Stop the job:
   ```
   kill %1
   ```
@@ -70,10 +74,11 @@ sleep 5
   kill job_id
   ```
 
-# Monitor Process Activity:
+# 4. Monitor Process Activity:
 
-##### Top vs. ps cmd:
+##### top vs. ps cmd:
 - top (used for interactive and real-time process monitoring.)
+  
 - ps (snapshot tool that displays a static list of currently running processes at a single point in time.)
 
 - uptime (Prints the current time, how long the machine has been up, how many user sessions are running and the current load average.)
