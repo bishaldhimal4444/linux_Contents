@@ -4,7 +4,7 @@
 **execute(x):**	1  
 
 # 2. Manage File System Permissions from the command line:
-1. Change Permissions with the symbolic method: 
+#### 1. Change Permissions with the symbolic method: 
 ```
 chmod <who/what/which> <file/directory>
 ```
@@ -21,7 +21,7 @@ Example: add r&w permissions for user and group:
 chmod ug+rw document.pdf
 ```
 
-2. Change permission with the octal method:
+#### 2. Change permission with the octal method:
 Example: Set r+w permissions for user, read-only permissions for group and other, on the same document.pdf file:
 ```
 chmod 644 document.pdf
@@ -29,7 +29,7 @@ chmod 644 document.pdf
 
 
 
-## Change File and Directory User or Group Ownership:
+#### 3. Change File and Directory User or Group Ownership:
 1. To grant ownership of the **app.conf** file to the **student**:
 ```
 chown student app.conf
@@ -43,7 +43,7 @@ chown :admin Picture
 chown visitor:guests Picture
 ```
 
-# Manage Default Permissions and File Access:
+# 3. Manage Default Permissions and File Access:
 1.	Default File Permissions:  \
   a.	On creation, a file is assigned initial permissions.	  \
   b.	Two factors affect these initial permissions:  \
@@ -71,7 +71,7 @@ Here, umask value is 0022, which clears write(w) permissions for group(g) and ot
 >/etc/login.def file sets the default umask for users, and might be affected by settings in the /etc/profile, /etc/bashrc, and /etc/profile.d
 
 
-3.	Setting Special Permissions:
+# 4.	Setting Special Permissions:
 
   a.	Symbolic:  
     i.	Setuid = u+s (executes files as the user that owns the file)  
