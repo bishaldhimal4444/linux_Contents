@@ -1,3 +1,7 @@
 #### Login to a Remote System: 
-1. ssh remoteUser@remoteHost  
-2. ssh -i pemfile.pem remoteUser@remoteHost (using pubic key authentication method)
+```
+ssh remoteUser@remoteHost
+```
+```
+ssh -i ssh-key.pem remoteUser@remoteHost (using pubic key authentication method)
+```
