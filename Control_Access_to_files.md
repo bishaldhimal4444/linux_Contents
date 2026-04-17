@@ -77,6 +77,8 @@ Here, umask value is 0022, which clears write(w) permissions for group(g) and ot
     i.	Setuid = u+s (executes files as the user that owns the file)  
     ii.	Setgid = g+s (executes files as the group that owns the file)  
     iii.	Sticky = o+t (users with write access to the directory can remove only files that they own)  
+
+    
   b.	Octal:  
     i.	Setuid = 4 (u + s)  
     ii.	Setgid = 2 (g + s)  
