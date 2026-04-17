@@ -48,14 +48,15 @@ chown visitor:guests Picture
   a.	On creation, a file is assigned initial permissions.	  \
   b.	Two factors affect these initial permissions:  \
     i.	First is: whether you are creating a file or directory.	  \
-    ii.	Second is: the current umask (user file-creation mask) \
+    ii.	Second is: the current umask (user file-creation mask) 
   	
   c.	If you create a directory, then its initial octal permisisons are 0777 (drwx rwx rwx)  \
   d.	If you create a regular file, then its initial octal permissions are 0666 (-rw -rw -rw).  
 
 2.	Umask:	  \
   a.	Umask cmd dispalys the umask value of current shell. \
-  b.	To change the umask value: umask <vlaue>  \
+  b.	To change the umask value: umask <vlaue>
+
 ##### Example: umask  
 ##### Output: 0022  
 
@@ -66,7 +67,7 @@ mkdir dir1 ; ls -ld dir1
 Output: drwxr- xr -x.    2    user    user   0 Jan 7   11:35   dir1  
 Here, umask value is 0022, which clears write(w) permissions for group(g) and other(o). So, when the user creates the new directory(dir1), it doesnot include the write(w) permissions for group(g) and other(o).   
 
->[!Note:]
+>[!NOTE]
 >/etc/login.def file sets the default umask for users, and might be affected by settings in the /etc/profile, /etc/bashrc, and /etc/profile.d
 
 
