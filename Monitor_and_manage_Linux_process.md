@@ -84,3 +84,17 @@ sleep 5
 - uptime (Prints the current time, how long the machine has been up, how many user sessions are running and the current load average.)
 
 - lscpu (displays the number of cpu's on a system.)
+
+# 5. Process Scheduling: 
+#### nice vs. renice: used to adjust the priority of the processes.
+1. nice:
+  - launch a new process with a specific priority
+  - syntax: ```nice -n <nice_value> <cmd>```
+  - Example: ```nice in 10 ./myscript.sh```
+
+2. renice:
+   - change the priority of an already running process.
+   - syntax: ```renice <nice_value> -p <pid>```
+   - Example: ```sudo renice 5 -p 100```
+  
+   
