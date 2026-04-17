@@ -47,7 +47,7 @@ systemctl in-enabled sshd
 
 
 # Control System Services:
-##### Start and Stop services:
+##### 1. Start and Stop services:
 ```
 systemctl status ssh.service
 ```
@@ -59,7 +59,7 @@ or,
 ```
 systemclt stop sshd
 ```
-##### Restart and Reload Services:
+##### 2. Restart and Reload Services:
 ```
 systemctl restart sshd
 ```
@@ -73,12 +73,12 @@ systemctl reload-or-restart sshd
 ```
 
 
-##### list Unit Dependecies
+##### 3. list Unit Dependecies
 ```
 systemctl list-dependencies sshd
 ```
 
-##### Mask and Unmask services:
+##### 4. Mask and Unmask services:
 ```
 systemctl mask service_name
 ```
@@ -87,7 +87,7 @@ or,
 systemctl unmask service_name
 ```
 
-##### Enable Services to Start or Stop at Boot
+##### 5. Enable Services to Start or Stop at Boot
 ```
 systemctl enable <unit>
 ```
@@ -106,6 +106,11 @@ systemctl disable --now <unit>
 
 systemctl enable **<unit>** cmd creates a symbolic link from the service unit file, usually in the ```/usr/lib/systemd/system```directory, to the disk location where the systemd command looks for files in the ```/etc/systemd/system/targetname.target.wants``` directory.
 
-Example: ```systemctl enable sshd.service``` : creates symlink ```/etc/systemd/system/multi-user.target.wants/sshd.service ----------> /usr/lib/systemd/system/sshd.service
+Example: ```systemctl enable sshd.service``` : creates symlink ```/etc/systemd/system/multi-user.target.wants/sshd.service``` ----------> ```/usr/lib/systemd/system/sshd.service```
 
+## Mask in linux:
+- Masking ensures the service cannot be started manually or automatically by another service or dependency.
+- Masking a service in linux means disabling it completely by linking its unit file to /dev/null.
+- Syntax: ```sudo systemctl mask <service_name>``` This creates a symlink: /etc/systemd/system/nginx.service ---> /dev/null
+- To unmask a service: ```sudo systemctl unmask <service_name>
 
